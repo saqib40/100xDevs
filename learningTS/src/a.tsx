@@ -1,3 +1,4 @@
+/*
 import './App.css'
 
 function App() {
@@ -26,3 +27,4 @@ function Todo(props : TodoProp) {
   )
 }
 export default App
+*/

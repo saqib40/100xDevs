@@ -99,3 +99,60 @@ let myTuple : [string, number] = ["test", 1];
 
 // Array of strings and numbers
 let eg: Array<string | number> = ["Alice", "Bob", "Charlie", 4];
+
+
+// Enums
+// perform action when user presses
+// up or down or left or right arrow key
+// what should be the type of pressed key
+// string => UP, DOWN, LEFT,RIGHT
+// number => 1,2,3,4
+// best is enum, it enforces the options
+// you can also limit options using unions
+// final values stored at runtime is number(0,1,2,...)
+// you can override the default value of numbers 
+enum Direction {
+    Up, // 0
+    Down = 2,
+    Left = "Left",
+    Right = "Right"
+}
+function doSomething(keyPressed : Direction) {
+    // write logic 
+    if(keyPressed == Direction.Up) {
+        //....
+    }
+}
+doSomething(Direction.Up);
+console.log(Direction.Right);
+
+// common use case in express
+enum ResponseStatus {
+    Success = 200,
+    NotFound = 404,
+    Error = 500
+}
+
+
+// function returning first element of array
+// array can be of type either string or number
+
+function retF(arr : (number | string)[]) : string | number {
+    return arr[0];
+}
+const value = retF(["saq", "aqi"]);
+// console.log(value.toUpperCase()); // throws error
+// also you aren't expecting mix of numbers and strings rather either one only
+// but here you can have both and no error is thrown
+// const value = retE([1,2,3,"saq"]);
+// one way to fix that is 
+// arr : number[] | string[]
+
+// hence better way is Generics
+function retF2<T>(arr:T[]): T {
+    return arr[0];
+}
+
+const value2 = retF2<string>(["saq", "aqi"]);
+const value3 = retF2([1,2,3]); // other way => inferred
+
