@@ -1,3 +1,8 @@
+// something important
+// starry-night isn't a good option
+// large bundle size and hard to configure
+// only reason included here is to match github's readme format
+
 import { marked } from "marked";
 import { useState, useEffect } from "react";
 import DOMPurify from "dompurify";
