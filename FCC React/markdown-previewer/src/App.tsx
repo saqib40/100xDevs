@@ -10,12 +10,12 @@ function App() {
     setText(initialMarkdown);
   }, []);
   return (
-    <div className="app-container">
-        <TextArea setText={setText} text={text} />
-      <div className="preview-area">
-        <PreviewArea text={text} />
-      </div>
-    </div>
+        <div className="app-container">
+          <TextArea setText={setText} text={text} />
+          <div className="preview-area">
+            <PreviewArea text={text} />
+          </div>
+        </div>
   )
 }
 

@@ -1,0 +1,57 @@
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%); /* Subtle dark gradient */
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #d1d1d1;
+    opacity: 0.9;
+  }
+  
+  .explore-button {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #007bff; /* Vibrant blue */
+    border: none;
+    border-radius: 50px; /* Rounded pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Glow effect */
+  }
+  
+  .explore-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+  }
+  
+  .explore-button:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  }
