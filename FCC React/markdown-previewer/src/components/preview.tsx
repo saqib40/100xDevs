@@ -53,7 +53,6 @@ export default function PreviewArea({ text }: textPropInter) {
         }
       }
       const cleanHTML = DOMPurify.sanitize(processedHtml);
-      console.log("Final sanitized HTML:", cleanHTML);
       setSanitizedHTML(cleanHTML);
     }
 

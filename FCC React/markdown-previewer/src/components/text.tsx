@@ -22,19 +22,23 @@ export default function TextArea({text, setText} : textPropInter) {
                 setOptions={{
                     showLineNumbers: true,
                     tabSize: 2,
-                    showPrintMargin: false // that annoying vertival line
+                    showPrintMargin: false, // that annoying vertival line
+                    wrap: true,
+                    scrollPastEnd: true,
                 }}
                 style={{
-                  margin : "-10px",
                   padding: "1rem",
                   border: "none",
                   outline: "none",
-                  resize: "none"
+                  resize: "none",
+                  overflow: "auto"
                 }}
                 // directly setting certain values
                 fontSize={16} //in pixels
                 width="95%"
                 height="100%"
+                readOnly={false} // Ensure it’s editable and selectable
+                highlightActiveLine={true}
             />
         </div>
     );
